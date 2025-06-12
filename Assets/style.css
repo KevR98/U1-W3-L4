@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cell {
+  display: inline-block;
+  width: 14%;
+  height: 106px;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
