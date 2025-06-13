@@ -11,3 +11,16 @@ const generateCells = function () {
   }
 };
 generateCells();
+
+let arr = [];
+let random;
+const randomNum = document.getElementById('genera');
+
+randomNum.addEventListener('click', (e) => {
+  e.preventDefault();
+  do {
+    random = Math.ceil(Math.random() * 5);
+  } while (arr.includes(random));
+  arr.push(random);
+  console.log(random);
+});
