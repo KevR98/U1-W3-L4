@@ -12,15 +12,24 @@ const generateCells = function () {
 };
 generateCells();
 
-let arr = [];
+let arr = []; // Qui vanno i numeri generati
 let random;
 const randomNum = document.getElementById('genera');
-
+const myForm = document.getElementById('generateForm');
+// Genero numeri casuali al click del bottone
 randomNum.addEventListener('click', (e) => {
   e.preventDefault();
+  // Chiedo all'array arr se che all'arrivo di 5 numeri allora si ferma
+  if (arr.length === 5) {
+    alert('HAI GENERATO TUTTI I NUMERI');
+    return;
+  }
+  // Faccio un controllo dei numeri generati e che non escano più di 1 volta
   do {
     random = Math.ceil(Math.random() * 5);
   } while (arr.includes(random));
+
   arr.push(random);
-  console.log(random);
+
+  myForm.reset();
 });
